@@ -1,6 +1,12 @@
+<script>
+  export let item1, item2,item3
+</script>
 
 
-<nav class="navbar  is-transparent has-shadow	" role="navigation" aria-label="main navigation">
+
+
+<header>
+<nav class="navbar is-transparent " role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <a class="navbar-item" href="https://bulma.io">
         <img src="">
@@ -16,15 +22,15 @@
     <div id="navbarBasicExample" class="navbar-menu is-centered">
       <div class="navbar-start" style="flex-grow: 1; justify-content: center;"
       >
-        <a class="navbar-item">
-          Photo
+        <a class="navbar-item" href="#/">
+          {item1}
         </a>
   
-        <a class="navbar-item">
-          Video
+        <a class="navbar-item" href="#/video">
+          {item2}
         </a>
-        <a class="navbar-item">
-          Contact
+        <a class="navbar-item" href="#/contact">
+          {item3}
         </a>
         
       
@@ -33,3 +39,12 @@
      
     </div>
   </nav>
+
+</header>
+
+
+<style>
+  nav{
+    background-color: #fef6e4;
+  }
+</style>
