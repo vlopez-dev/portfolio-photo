@@ -72,7 +72,7 @@
     
     
         .custom-component {
-            background-color: #fef6e4;
+            background-color: #e3f6f5;
         }
     
     

@@ -9,7 +9,7 @@
 
 
   let routes={
-  "/":Home,
+  "/":Gallery,
   "/video":Video,
   "/contact":Contact,
 
@@ -23,14 +23,15 @@
 
 
   <Nav
-  item1="Home"
+  item1="Photos"
   item2="Video"
   item3="Contact"
-  
   ></Nav>
-  <Home></Home>
+<Home
 
-<Gallery></Gallery>
+></Home>
+  
+<!-- <Gallery></Gallery> -->
 <Router {routes}></Router>
 
 <Footer></Footer>
@@ -41,6 +42,6 @@
     color: white;
     flex-direction: column;
     place-items:normal;
-    background-color: #fef6e4;
+    background-color: #e3f6f5;
 	}
 </style>

@@ -10,107 +10,104 @@
 
     
 
-    let message;
-    let email;
-    let contacts = [];
+//     let message;
+//     let email;
+//     let contacts = [];
 
-  onMount(async () => {
-    fetch("https://vic.uy/contact/")
-      .then((response) => response.json())
-      .then((data) => {
-        contacts = data;
-        console.log(contacts);
-        // console.log(data);
-      })
-      .catch((error) => {
-        // console.log(error);
-        return [];
-      });
-  });
+//   onMount(async () => {
+//     fetch("https://vic.uy/contact/")
+//       .then((response) => response.json())
+//       .then((data) => {
+//         contacts = data;
+//         console.log(contacts);
+//         // console.log(data);
+//       })
+//       .catch((error) => {
+//         // console.log(error);
+//         return [];
+//       });
+//   });
 
   
-  function getCookie(name) {
-  let cookieValue = null;
-  if (document.cookie && document.cookie !== "") {
-    const cookies = document.cookie.split(";");
-    for (let i = 0; i < cookies.length; i++) {
-      const cookie = cookies[i].trim();
-      if (cookie.substring(0, name.length + 1) === name + "=") {
-        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-        break;
-      }
-    }
-  }
-  return cookieValue;
+//   function getCookie(name) {
+//   let cookieValue = null;
+//   if (document.cookie && document.cookie !== "") {
+//     const cookies = document.cookie.split(";");
+//     for (let i = 0; i < cookies.length; i++) {
+//       const cookie = cookies[i].trim();
+//       if (cookie.substring(0, name.length + 1) === name + "=") {
+//         cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+//         break;
+//       }
+//     }
+//   }
+//   return cookieValue;
 
-}
-
-
-
-
-  const sendEmail=async () => {
-
-    const csrfCookie = getCookie("csrftoken");
-
-    const recaptchaResponse = grecaptcha.getResponse();
-
-    const response = await fetch("https://vic.uy/send_email/", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "X-CSRFToken": csrfCookie, 
-      },
-      body: JSON.stringify({ message, email,recaptchaResponse }),
-      credentials: 'include',
-    });
-
-    if (!response.ok) {
-      console.log(response)
-      const data = await response.json();
-      console.error("Error enviando correo",data);
-      document.getElementById("message").textContent = "Error al enviar e mensaje, intentelo nuevamente";
-
-    } else {
-      console.log(response)
-
-      // const data = await response.json();
-      document.getElementById("message").textContent = "Mensaje enviado con exito";
-
-      console.log("Correo enviado correctamente");
-    }
-  };
+// }
 
 
 
 
-  let recaptchaResponse = null;
+//   const sendEmail=async () => {
 
-function onRecaptcha(response) {
-  recaptchaResponse = response;
-}
+//     const csrfCookie = getCookie("csrftoken");
+
+//     const recaptchaResponse = grecaptcha.getResponse();
+
+//     const response = await fetch("https://vic.uy/send_email/", {
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/json",
+//         "X-CSRFToken": csrfCookie, 
+//       },
+//       body: JSON.stringify({ message, email,recaptchaResponse }),
+//       credentials: 'include',
+//     });
+
+//     if (!response.ok) {
+//       console.log(response)
+//       const data = await response.json();
+//       console.error("Error enviando correo",data);
+//       document.getElementById("message").textContent = "Error al enviar e mensaje, intentelo nuevamente";
+
+//     } else {
+//       console.log(response)
+
+//       // const data = await response.json();
+//       document.getElementById("message").textContent = "Mensaje enviado con exito";
+
+//       console.log("Correo enviado correctamente");
+//     }
+//   };
+
+
+
+
+//   let recaptchaResponse = null;
+
+// function onRecaptcha(response) {
+//   recaptchaResponse = response;
+// }
 
 
 </script>
 
-<Animate >
   <section class="hero is-fullheight custom-component  " >
     <div class="columns is-multiline mx-2 my-6">
       <div class="column"></div>
       <div class="column is-one-third">
         <div class="container">
-          {#each contacts as contact}
 
-          <h4 class="title custom-title">{contact.title}</h4>
-          <p class="custom-text">{contact.description}</p>
-          {/each}
+          <h4 class="title custom-title"></h4>
+          <p class="custom-text"></p>
           <div class="custom-message" id="message"></div>
 
         </div>
-        <form class="mt-6" action="" on:submit|preventDefault={sendEmail}>
+        <form class="mt-6" action="" >
         <div class="field">
           <label class="label custom-label">Email</label>
           <div class="control has-icons-left has-icons-right">
-            <input class="input custom-input " type="email" bind:value={email} placeholder="Email input">
+            <input class="input custom-input " type="email" placeholder="Email input">
             <span class="icon is-small is-left">
               <i class="fas fa-envelope"></i>
             </span>
@@ -124,7 +121,7 @@ function onRecaptcha(response) {
         <div class="field">
           <label class="label custom-label">Message</label>
           <div class="control">
-            <textarea class="textarea custom-input" bind:value={message}  placeholder="Message"></textarea>
+            <textarea class="textarea custom-input"   placeholder="Message"></textarea>
           </div>
         </div>
 
@@ -155,7 +152,6 @@ function onRecaptcha(response) {
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
   </section>
-</Animate>
 
 
 
@@ -198,7 +194,7 @@ function onRecaptcha(response) {
 
 
   .custom-component {
-        background-color: #fffffe;
+        background-color: #e3f6f5;
     }
 
   :global(body.dark-mode) .custom-component {

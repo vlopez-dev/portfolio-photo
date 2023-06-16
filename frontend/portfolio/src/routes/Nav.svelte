@@ -6,7 +6,7 @@
 
 
 <header>
-<nav class="navbar is-transparent " role="navigation" aria-label="main navigation">
+<nav class="navbar " role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <a class="navbar-item" href="https://bulma.io">
         <img src="">
@@ -22,29 +22,18 @@
     <div id="navbarBasicExample" class="navbar-menu is-centered">
       <div class="navbar-start" style="flex-grow: 1; justify-content: center;"
       >
-        <a class="navbar-item" href="#/">
-          {item1}
-        </a>
-  
-        <a class="navbar-item" href="#/video">
-          {item2}
-        </a>
-        <a class="navbar-item" href="#/contact">
-          {item3}
-        </a>
-        
-      
+        <a class="navbar-item" href="#/">{item1}</a>
+        <a class="navbar-item" href="#/video">{item2}</a>
+        <a class="navbar-item" href="#/contact">{item3}</a>
       </div>
-  
-     
     </div>
   </nav>
-
 </header>
+<slot />
 
 
 <style>
   nav{
-    background-color: #fef6e4;
+    background-color: #e3f6f5;
   }
 </style>
