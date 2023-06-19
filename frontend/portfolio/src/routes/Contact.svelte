@@ -164,7 +164,7 @@
 
   
 .label__contact{
-  color: #fffffe;
+  color: #2d334a;
 
 }
 
@@ -173,12 +173,12 @@
 .title {
     font-family: "Karla", sans-serif;
     text-align: center;
-    color: #fffffe;
+    color: #2d334a;
   }
 
   .subtitle{
     text-align: center;
-    color: #a7a9be;
+    color: #2d334a;
   }
 
 
@@ -194,11 +194,11 @@
 
 
   .custom-component {
-        background-color: #e3f6f5;
+        background-color: #fffffe;
     }
 
   :global(body.dark-mode) .custom-component {
-        background-color: #0f0e17;
+        background-color: #2d334a;
         color: #fffffe;
     }
 
@@ -213,7 +213,7 @@
     }
 
 .custom-form {
-        color: #1f1235;
+        color: #2d334a;
 }
 
 

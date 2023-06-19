@@ -72,7 +72,7 @@
     
     
         .custom-component {
-            background-color: #e3f6f5;
+            background-color: #fffffe;
         }
     
     
@@ -95,7 +95,7 @@
     
     
     :global(body.dark-mode) .custom-icons {
-            background-color: #0f0e17;
+            background-color: #272343;
             color: #fffffe;
         }
     

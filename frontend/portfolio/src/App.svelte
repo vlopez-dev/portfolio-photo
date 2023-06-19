@@ -42,6 +42,6 @@
     color: white;
     flex-direction: column;
     place-items:normal;
-    background-color: #e3f6f5;
+    background-color: #fffffe;
 	}
 </style>

@@ -24,7 +24,7 @@
 
 
     img{
-        border-radius: 20px;
+        border-radius: 38px;
 background: #e3f6f5;
 box-shadow:  15px 15px 30px #c1d1d0,
              -15px -15px 30px #ffffff;
