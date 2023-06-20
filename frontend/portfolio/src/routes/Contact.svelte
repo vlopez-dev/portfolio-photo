@@ -219,9 +219,9 @@
 
 
 .custom-button{
-  background-color: #ff6e6c;
+  background-color: #bae8e8;
     border: none;
-    color: #fffffe;
+    color: #2d334a;
     width: 105px;
     margin-bottom: 15px;
 

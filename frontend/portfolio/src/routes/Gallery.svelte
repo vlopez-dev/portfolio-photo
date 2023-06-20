@@ -5,7 +5,7 @@
 		console.log(e.detail.src)
 	}
 </script>
-<section class="m-6">
+<section class="hero is-fullheight custom-component  m-6">
 <Gallery  gap="30" maxColumnWidth="400" on:click={handleClick} >
 	<img src="https://images.unsplash.com/photo-1686208303474-31237e3ec4f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80" />
 	<img src="https://images.unsplash.com/photo-1686237542774-4f1ead43a6d6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=846&q=80" />
@@ -29,4 +29,34 @@ background: #e3f6f5;
 box-shadow:  15px 15px 30px #c1d1d0,
              -15px -15px 30px #ffffff;
     }
+
+    .image-description {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    color: #fff;
+    border-radius: 5px;
+    z-index: 999;
+  }
+
+  .image-description p {
+    margin: 0;
+  }
+
+  .image-description a.button {
+    display: inline-block;
+    margin-top: 10px;
+    color: #fff;
+    background-color: #3273dc;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+
+  .image:hover .image-description {
+    opacity: 1;
+  }
 </style>
