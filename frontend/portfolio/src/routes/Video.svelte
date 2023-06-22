@@ -2,9 +2,9 @@
 
 </script>
 
-<section class="hero is-fullheight custom-component  " style="background-color: #bae8e8;">
+<section class="hero is-fullheight custom-component  " >
 
-<h1 style="color: red;">Video</h1>
+
 
 </section>
 <style>

@@ -1,5 +1,5 @@
 <script>
-    import { GithubIcon,LinkedinIcon,TwitterIcon } from 'svelte-feather-icons'
+    import { InstagramIcon,FacebookIcon,TwitterIcon } from 'svelte-feather-icons'
     
     </script>
     
@@ -16,12 +16,12 @@
             </div>
             <div class="box_social custom-icons">
               <a href="https://github.com/vlopez-dev" class="custom-icons" target="_blank">
-              <GithubIcon size="24" />
+              <InstagramIcon size="24" />
             </a>
             </div>
             <div class="box_social custom-icons">
               <a href="https://www.linkedin.com/in/victorlopezr/" class="custom-icons" target="_blank">
-              <LinkedinIcon size="24" />
+              <FacebookIcon size="24" />
             </a>
             </div>
             

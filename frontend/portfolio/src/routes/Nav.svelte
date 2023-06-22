@@ -23,8 +23,8 @@
 
 
 
-<header>
-<nav class="navbar " role="navigation" aria-label="main navigation">
+<header class="pb-6">
+<nav class="navbar is-fixed-top " role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <a class="navbar-item" href="https://bulma.io">
         <img src="">
@@ -58,37 +58,5 @@
 
 
 
-  .btn {
- /* display: inline-block; */
- padding: 0.9rem 1.8rem;
- font-size: 16px;
- color: #272343;
- /* border-radius: 15px; */
- cursor: pointer;
- position: relative;
- background-color: transparent;
- text-decoration: none;
- overflow: hidden;
- z-index: 1;
- 
- font-family: 'Montserrat', sans-serif;
-}
-
-.btn::before {
- content: "";
- position: absolute;
- left: 0;
- top: 0;
- width: 100%;
- height: 100%;
- background-color:#e3f6f5;
- transform: translateX(-100%);
- transition: all .3s;
- z-index: -1;
- 
-}
-
-.btn:hover::before {
- transform: translateX(0);
-}
+  
 </style>
