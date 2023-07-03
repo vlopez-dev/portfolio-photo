@@ -1,5 +1,7 @@
 <script>
-  export let item1, item2,item3
+    import { scrollTo, scrollRef, scrollTop } from 'svelte-scrolling'
+
+  export let item0 ,item1, item2,item3,item4
   let currentSection = 'inicio'; // Sección inicialmente visible
 
   window.onload = function() {
@@ -19,9 +21,11 @@
     });
   });
 };
+
+
 function handleScroll(event) {
     const scrollPosition = event.target.scrollTop;
-    const sections = ['inicio', 'sobre', 'servicios', 'contacto']; // Las secciones de tu página
+    const sections = ['home','photo', 'video', 'about', 'contact']; // Las secciones de tu página
 
     // Calcula qué sección es visible en la ventana del navegador
     const visibleSection = sections.find(sectionId => {
@@ -36,8 +40,9 @@ function handleScroll(event) {
 
     // Actualiza la sección actualmente visible
     currentSection = visibleSection || currentSection;
-  }
 
+    
+  }
 
 
 
@@ -63,9 +68,14 @@ function handleScroll(event) {
     <div id="nav-links" class="navbar-menu is-centered">
       <div class="navbar-start" style="flex-grow: 1; justify-content: center;"
       >
-        <a class="navbar-item btn" href="#Home">{item1}</a>
-        <a class="navbar-item btn" href="#Video">{item2}</a>
-        <a class="navbar-item btn :selected={currentSection === 'contacto'}" href="#Contact">{item3}</a>
+      <a class="navbar-item btn "  use:scrollTo={{ref:'home', duration: 1500}} href="#Home">{item0}</a>
+
+        <a class="navbar-item btn" use:scrollTo={{ref:'photo',duration:1000}} href="#Photo">{item1}</a>
+        <a class="navbar-item btn" use:scrollTo={{ref:'video',duration:1000}} href="#Video">{item2}</a>
+        <a class="navbar-item btn "use:scrollTo={{ref:'about',duration:1000}} href="#About">{item4}</a>
+
+        <a class="navbar-item btn"  use:scrollTo={{ref:'contact',duration:1000}} href="#Contact">{item3}</a>
+
       </div>
     </div>
   </nav>

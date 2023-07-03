@@ -1,4 +1,6 @@
 <script>
+    import { scrollTo, scrollRef, scrollTop } from 'svelte-scrolling'
+
   import Home from './routes/Home.svelte';
   import Nav from './routes/Nav.svelte';
   import Gallery from './routes/Gallery.svelte';
@@ -23,27 +25,25 @@
 
 
   <Nav
+  item0="Home"
   item1="Photos"
   item2="Video"
   item3="Contact"
+  item4="About"
   ></Nav>
 
-<section id="Home" class=" home-section hero is-fullheight custom-component">
+<section use:scrollRef={'home'} id="Home" class=" home-section hero is-fullheight custom-component">
   <Home></Home>
 </section>
 
-<section id="photo" class="photo-gallery hero is-fullheight custom-component">
-  <!-- <h1 class="title">Photos</h1> -->
+<section use:scrollRef={'photo'} id="Photo" class="photo-gallery hero is-fullheight custom-component">
   <Gallery> </Gallery>
 </section>
-<section id="video" class=" section-video hero is-fullheight custom-component">
-  <!-- <h1 class="title" >Video</h1> -->
+<section use:scrollRef={'video'} id="Video" class=" section-video hero is-fullheight custom-component">
 </section>
-<section id="about" class=" about-section hero is-fullheight custom-component mt-6">
-  <!-- <h1 class="title">About</h1> -->
+<section use:scrollRef={'about'} id="About" class=" about-section hero is-fullheight custom-component mt-6" >
 </section>
-<section id="contact" class=" contact-section hero is-fullheight custom-component">
-  <!-- <h1 class="title">Contact</h1> -->
+<section use:scrollRef={'contact'} id="Contact" class=" contact-section hero is-fullheight custom-component">
   <Contact></Contact>
 </section>
 
@@ -61,13 +61,13 @@
 
   .home-section {
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 81%);
-    background-color: #d1d1e9;
+    background-color: #bae8e8;
       }
 
   .section-video{
     clip-path: polygon(0 0, 100% 19%, 100% 100%, 0 100%);
     
-    background-color: #d1d1e9;
+    background-color: #bae8e8;
 
   }
 
@@ -77,10 +77,10 @@
 
 
   .about-section{
+    clip-path: polygon(0 0, 100% 19%, 100% 100%, 0 100%);
 
   }
   .contact-section{
-    clip-path: polygon(0 0, 100% 19%, 100% 100%, 0 100%);
 
 background-color: #bae8e8;
   }
