@@ -31,12 +31,5 @@
 	:global(img):hover { opacity: 1; transform: scale(1.04) }
 
 
-    img{
-      /* border-radius: 38px;
-background: #d1d1e9;
-box-shadow:  18px 18px 36px #b2b2c6,
-             -18px -18px 36px #f0f0ff; */
-    }
 
-  
 </style>

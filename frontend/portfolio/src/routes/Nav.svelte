@@ -1,5 +1,6 @@
 <script>
   export let item1, item2,item3
+  let currentSection = 'inicio'; // Sección inicialmente visible
 
   window.onload = function() {
   const burgerIcon = document.querySelector("#burger");
@@ -18,6 +19,28 @@
     });
   });
 };
+function handleScroll(event) {
+    const scrollPosition = event.target.scrollTop;
+    const sections = ['inicio', 'sobre', 'servicios', 'contacto']; // Las secciones de tu página
+
+    // Calcula qué sección es visible en la ventana del navegador
+    const visibleSection = sections.find(sectionId => {
+      const sectionElement = document.getElementById(sectionId);
+      if (sectionElement) {
+        const sectionTop = sectionElement.offsetTop;
+        const sectionBottom = sectionTop + sectionElement.offsetHeight;
+        return scrollPosition >= sectionTop && scrollPosition < sectionBottom;
+      }
+      return false;
+    });
+
+    // Actualiza la sección actualmente visible
+    currentSection = visibleSection || currentSection;
+  }
+
+
+
+
 </script>
 
 
@@ -40,9 +63,9 @@
     <div id="nav-links" class="navbar-menu is-centered">
       <div class="navbar-start" style="flex-grow: 1; justify-content: center;"
       >
-        <a class="navbar-item btn" href="#/">{item1}</a>
-        <a class="navbar-item btn" href="#/video">{item2}</a>
-        <a class="navbar-item btn" href="#/contact">{item3}</a>
+        <a class="navbar-item btn" href="#Home">{item1}</a>
+        <a class="navbar-item btn" href="#Video">{item2}</a>
+        <a class="navbar-item btn :selected={currentSection === 'contacto'}" href="#Contact">{item3}</a>
       </div>
     </div>
   </nav>

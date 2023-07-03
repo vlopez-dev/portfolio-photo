@@ -92,7 +92,6 @@
 
 </script>
 
-  <section class="hero is-fullheight custom-component  " >
     <div class="columns is-multiline mx-2 my-6">
       <div class="column"></div>
       <div class="column is-one-third">
@@ -148,11 +147,10 @@
       </div>
 
       <div class="column"></div>
+      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     </div>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
-  </section>
 
 
 
