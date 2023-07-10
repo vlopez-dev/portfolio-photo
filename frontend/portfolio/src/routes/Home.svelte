@@ -26,15 +26,18 @@
 .title{
     color: #272343;
     font-family: 'Montserrat', sans-serif;
-    font-size: 80px;
+    font-size: 8rem;
     text-align: center;
+    /* line-height: 1.70rem; */
 }
 
 
 .subtitle{
     color: #272343;
     font-family: 'Hind', sans-serif;
-    font-size: 36px;
+    font-size: 3.6rem;
     text-align: center;
+    /* line-height: 1.70rem; */
+
     }
 </style>

@@ -86,10 +86,12 @@ function handleScroll(event) {
 <style>
   nav{
     background-color: #fffffe;
+    
   }
 
-
-
+.navbar-item{
+  font-family: 'Montserrat', sans-serif;
+}
 
   
 </style>
