@@ -62,7 +62,17 @@
   .home-section {
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 81%);
     background-color: #bae8e8;
+    background-image: url(../../portfolio/img/neom-StbFt6TU1xs-unsplash.jpg);
+    background-size: cover;
+    background-position: center center;
       }
+
+      @media screen and (max-width: 768px) {
+        .home-section {
+        background-size: cover;
+        background-position: center center;
+    }
+}
 
   .section-video{
     clip-path: polygon(0 0, 100% 19%, 100% 100%, 0 100%);
