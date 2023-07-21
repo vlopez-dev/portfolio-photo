@@ -1,49 +1,76 @@
 <script>
-    import Gallery from 'svelte-image-gallery'
     import { onMount } from "svelte";
     function handleClick(e) {
 		console.log(e.detail.src)
 	}
 </script>
-<section class="hero is-fullheight custom-component mt-6">
-    <div class="columns" >
-        <div class="column"></div>
-        <div class="column is-four-fifths">
-            <h2 class="title">Photo</h2>
-    <Gallery  gap="30" maxColumnWidth="400" on:click={handleClick} >
-        <div class="efect-img">
-            <img  src="https://images.unsplash.com/photo-1686208303474-31237e3ec4f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80" />
-            <div class="image-over">
-                <h3 class="title"></h3>
-                <a class="btn-go-to-album" href="">Album</a>
+<section class="section">
+    <div class="container">
+      <div class="columns is-multiline">
+          <div class="column is-4">
+            <div class="gallery-item box" data-index="">
+              <figure class="image is-square">
+                <img src="https://images.unsplash.com/photo-1689776574086-50ff04ae5dec?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="" />
+                <div class="album-info">
+                  <h3>Nombre del álbum 1</h3>
+                  <button>Ver detalles</button>
+                </div>
+              </figure>
             </div>
-        </div>
-        <img class="efect-img" src="https://images.unsplash.com/photo-1686237542774-4f1ead43a6d6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=846&q=80" />
-        <img class="efect-img" src="https://images.unsplash.com/photo-1686214715439-44ad1b59e0ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=695&q=80" />
-        <img class="efect-img" src="https://images.unsplash.com/photo-1685977706328-7db7f86db70d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="">
-        <img class="efect-img" src="https://images.unsplash.com/photo-1686176940284-15fcae290283?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=671&q=80" alt="">
-        <img class="efect-img" src="https://images.unsplash.com/photo-1686131128954-3ceccda2d684?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80" alt="">
-        <img class="efect-img" src="https://images.unsplash.com/photo-1685983633468-bf187eca26ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80" alt="">
-        <img class="efect-img" src="https://images.unsplash.com/photo-1601895905331-5c877f444583?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="">
-    </Gallery>
-</div>
-<div class="column"></div>
-
-
-</div>
-</section>
+          </div>
+          <div class="column is-4">
+            <div class="gallery-item box" data-index="">
+              <figure class="image is-square">
+                <img src="https://images.unsplash.com/photo-1545341425-ee53bbfd2653?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="" />
+                <div class="album-info">
+                  <h3>Nombre del álbum 1</h3>
+                  <button>Ver detalles</button>
+                </div>
+              </figure>
+            </div>
+          </div>
+          <div class="column is-4">
+            <div class="gallery-item box" data-index="">
+              <figure class="image is-square">
+                <img src="https://images.unsplash.com/photo-1689851709772-aa131deb6e2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="" />
+                <div class="album-info">
+                  <h3>Nombre del álbum 1</h3>
+                  <button>Ver detalles</button>
+                </div>
+              </figure>
+            </div>
+          </div>
+          <div class="column is-4">
+            <div class="gallery-item box" data-index="">
+              <figure class="image is-square">
+                <img src="https://images.unsplash.com/photo-1689192092151-5d8984fdd21d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="" />
+                <div class="album-info">
+                  <h3>Nombre del álbum 1</h3>
+                  <button>Ver detalles</button>
+                </div>
+              </figure>
+              
+            </div>
+          </div>
+          <div class="column is-4">
+            <div class="gallery-item box" data-index="">
+              <figure class="image is-square">
+                <img src="../../img/christopher-campbell-rDEOVtE7vOs-unsplash.jpg" alt="" />
+                <div class="album-info">
+                  <h3>Nombre del álbum 1</h3>
+                  <button>Ver detalles</button>
+                </div>
+              </figure>
+              
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
 
 <style>
 
-.efect-img {
-    opacity: 0.9;
-    transition: all 0.2s;
-}
 
-.efect-img:hover {
-    opacity: 1;
-    transform: scale(1.04);
-}
 
 
 .title{
@@ -51,38 +78,47 @@ font-family: 'Montserrat', sans-serif;
 font-size: 2.6rem;
     }
 
-.image-over{
+    .gallery-item {
+    cursor: pointer;
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
+
+
+  .album-info {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 0 ;
-    background-color: rgba(0, 0, 0, 0.8);
-    transition: opacity 0.2s;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.efect-img:hover .image-over {
-  opacity: 1;
-}
-
-.image-title {
-  color: #fff;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.btn-go-to-album {
-  background-color: #fff;
-  color: #000;
-  padding: 0.5rem 1rem;
-  text-decoration: none;
-  font-weight: bold;
-}
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    opacity: 0; /* Ocultar por defecto, solo se mostrará al hacer hover */
+    pointer-events: none; /* Evitar que los elementos dentro de este div sean clickeables */
+    transition: opacity 0.3s;
+  }
+  .gallery-item:hover .album-info {
+    opacity: 1;
+    pointer-events: auto;
+  }
 
 
+
+  .album-info button {
+    padding: 10px 20px;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
 </style>
