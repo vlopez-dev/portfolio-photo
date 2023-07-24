@@ -40,6 +40,7 @@
   <Gallery> </Gallery>
 </section>
 <section use:scrollRef={'video'} id="Video" class=" section-video hero is-fullheight custom-component">
+  <Video></Video>
 </section>
 <section use:scrollRef={'about'} id="About" class=" about-section hero is-fullheight custom-component mt-6" >
 </section>
@@ -61,8 +62,8 @@
 
   .home-section {
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 81%);
-    background-color: #bae8e8;
-    background-image: url(../../portfolio/img/neom-StbFt6TU1xs-unsplash.jpg);
+    background-color: #fffffe;
+    background-image: url(../../portfolio/img/neom-StbFt6TU1xs-unsplash.webp);
     background-size: cover;
     background-position: center center;
       }
@@ -77,7 +78,7 @@
   .section-video{
     clip-path: polygon(0 0, 100% 19%, 100% 100%, 0 100%);
     
-    background-color: #bae8e8;
+    background-color: #e3f6f5;
 
   }
 
@@ -92,7 +93,7 @@
   }
   .contact-section{
 
-background-color: #bae8e8;
+background-color: #e3f6f5;
   }
 
 

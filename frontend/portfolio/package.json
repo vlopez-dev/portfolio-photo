@@ -20,6 +20,7 @@
     "svelte-feather-icons": "^4.0.1",
     "svelte-image-gallery": "^1.7.0",
     "svelte-scrolling": "^1.2.2",
-    "svelte-spa-router": "^3.3.0"
+    "svelte-spa-router": "^3.3.0",
+    "svelte-video-player": "^1.2.5"
   }
 }
