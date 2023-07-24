@@ -11,14 +11,26 @@
          
           <div class="column is-4">
             <div class="gallery-item box" data-index="">
-              <figure class="image is-square">
-                <video src="../../video/istockphoto-1175207653-640_adpp_is.mp4"></video>
+                <video controls autoplay >
+                  <source src="../../video/istockphoto-1175207653-640_adpp_is.mp4" type="video/mp4">
+                </video>
                
-              </figure>
             </div>
           </div>
-         
-         
+          <div class="column is-4">
+            <div class="gallery-item box" data-index="">
+                <video controls autoplay >
+                  <source src="../../video/168811 (720p).mp4" type="video/mp4">
+                </video>
+            </div>
+          </div>
+          <div class="column is-4">
+            <div class="gallery-item box" data-index="">
+                <video controls autoplay >
+                  <source src="../../video/160767 (720p).mp4" type="video/mp4">
+                </video>
+            </div>
+          </div>
       </div>
     </div>
   </section>
@@ -80,5 +92,16 @@ font-size: 2.6rem;
 
   video {
     width: 100%;
+  }
+
+  .gallery-item {
+    cursor: pointer;
+    margin-top: 230px;
+  }
+
+  .gallery-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 </style>
