@@ -7,6 +7,7 @@
   import Footer from './routes/Footer.svelte';
   import Contact from './routes/Contact.svelte';
   import Video from './routes/Video.svelte';
+  import About from './routes/About.svelte';
   import Router from "svelte-spa-router"
 
 
@@ -43,6 +44,7 @@
   <Video></Video>
 </section>
 <section use:scrollRef={'about'} id="About" class=" about-section hero is-fullheight custom-component mt-6" >
+  <About></About>
 </section>
 <section use:scrollRef={'contact'} id="Contact" class=" contact-section hero is-fullheight custom-component">
   <Contact></Contact>
@@ -88,7 +90,7 @@
 
 
   .about-section{
-    clip-path: polygon(0 0, 100% 19%, 100% 100%, 0 100%);
+    /* clip-path: polygon(0 0, 100% 19%, 100% 100%, 0 100%); */
 
   }
   .contact-section{
