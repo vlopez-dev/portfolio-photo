@@ -6,6 +6,7 @@
     <div class="column" ></div>
     <div class="column is-one-third" >
         <figure class="is-flex is-justify-content-center ">
+            
         <img class="is-rounded about-image-shadow" src="https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=699&q=80" alt="">
     </figure>
 </div>
@@ -25,12 +26,18 @@
    img{
     width: 60%;
     height: auto;
-    border-radius: 50%;
+    /* border-radius: 50%; */
    }
 
 
    .about-image-shadow{
     box-shadow: 0 30px 30px -30px rgba(27, 26, 26, 0.315);
 
+   }
+
+   figure{
+    background-color: #ffd803;
+    border-radius: 3% 97% 0% 100% / 0% 99% 1% 100% ;
+    /* fancyborder */
    }
 </style>

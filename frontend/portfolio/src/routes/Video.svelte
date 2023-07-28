@@ -6,6 +6,7 @@
 </script>
 <section class="section">
     <div class="container">
+      <h1 class="title title-section ">Video</h1>
       <div class="columns is-multiline">
          
          
@@ -44,6 +45,13 @@
 font-family: 'Montserrat', sans-serif;
 font-size: 2.6rem;
     }
+
+    .title-section{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.6rem;
+  text-align: center;
+
+}
 
     .gallery-item {
     cursor: pointer;
@@ -96,7 +104,6 @@ font-size: 2.6rem;
 
   .gallery-item {
     cursor: pointer;
-    margin-top: 230px;
   }
 
   .gallery-item video {

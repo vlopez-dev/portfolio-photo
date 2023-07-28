@@ -63,7 +63,7 @@
 	}
 
   .home-section {
-    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 81%);
+    /* clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 81%); */
     background-color: #fffffe;
     background-image: url(../../portfolio/img/neom-StbFt6TU1xs-unsplash.webp);
     background-size: cover;
@@ -78,13 +78,14 @@
 }
 
   .section-video{
-    clip-path: polygon(0 0, 100% 19%, 100% 100%, 0 100%);
+    /* clip-path: polygon(0 0, 100% 19%, 100% 100%, 0 100%); */
     
     background-color: #e3f6f5;
 
   }
 
   .photo-gallery {
+    background-color: #e3f6f5;;
   }
 
 

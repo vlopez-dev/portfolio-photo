@@ -6,6 +6,7 @@
 </script>
 <section class="section">
     <div class="container">
+      <h1 class="title title-section">Photo</h1>
       <div class="columns is-multiline">
           <div class="column is-4">
             <div class="gallery-item box" data-index="">
@@ -77,6 +78,14 @@
 font-family: 'Montserrat', sans-serif;
 font-size: 2.6rem;
     }
+
+.title-section{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.6rem;
+  text-align: center;
+
+}
+
 
     .gallery-item {
     cursor: pointer;
