@@ -52,10 +52,11 @@ function handleScroll(event) {
 
 
 <header class="pb-6">
-<nav class="navbar is-fixed-top " role="navigation" aria-label="main navigation">
+<nav class="navbar is-fixed-top "  aria-label="main navigation">
     <div class="navbar-brand">
       <a class="navbar-item" href="https://bulma.io">
-        <img src="">
+        <img src="" alt="">
+        <h6>Nombre</h6>
       </a>
   
       <a id="burger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">

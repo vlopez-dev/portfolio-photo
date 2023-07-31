@@ -1,6 +1,9 @@
 
 
 <section class="section">
+    <div class="container">
+        <h2 class="title title-section">About me</h2>
+    </div>
 <div class="columns is-multiline mx-2 my-6" >
     
     <div class="column" ></div>
@@ -12,8 +15,8 @@
 </div>
     <div class="column" >
         <div class="container">
-            <h2 class="title">Titulo</h2>
-            <p class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam aut voluptate inventore placeat odio perferendis accusamus repellat? Nihil, accusantium reprehenderit, voluptates sequi, aspernatur laudantium vero labore fuga in quibusdam cumque!</p>
+            <h2 class="title title-about">Titulo</h2>
+            <p class="subtitle paragraff-about">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam aut voluptate inventore placeat odio perferendis accusamus repellat? Nihil, accusantium reprehenderit, voluptates sequi, aspernatur laudantium vero labore fuga in quibusdam cumque!</p>
         </div>
     </div>
     <div class="column" ></div>
@@ -29,6 +32,13 @@
     /* border-radius: 50%; */
    }
 
+   .title-section{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.6rem;
+  text-align: center;
+
+}
+
 
    .about-image-shadow{
     box-shadow: 0 30px 30px -30px rgba(27, 26, 26, 0.315);
@@ -39,5 +49,15 @@
     background-color: #ffd803;
     border-radius: 3% 97% 0% 100% / 0% 99% 1% 100% ;
     /* fancyborder */
+   }
+
+
+   .title-about{
+    font-family:'Montserrat', sans-serif;
+;
+   }
+
+   .paragraff-about{
+    font-family: 'Hind', sans-serif;
    }
 </style>

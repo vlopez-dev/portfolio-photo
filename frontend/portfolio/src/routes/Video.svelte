@@ -6,7 +6,7 @@
 </script>
 <section class="section">
     <div class="container">
-      <h1 class="title title-section ">Video</h1>
+      <h2 class="title title-section ">Video</h2>
       <div class="columns is-multiline">
          
          

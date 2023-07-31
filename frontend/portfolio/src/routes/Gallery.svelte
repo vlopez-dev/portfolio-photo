@@ -6,7 +6,7 @@
 </script>
 <section class="section">
     <div class="container">
-      <h1 class="title title-section">Photo</h1>
+      <h2 class="title title-section">Photo</h2>
       <div class="columns is-multiline">
           <div class="column is-4">
             <div class="gallery-item box" data-index="">

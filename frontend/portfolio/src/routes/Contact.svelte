@@ -91,7 +91,7 @@
 
 
 </script>
-
+      
     <div class="columns is-multiline mx-2 my-6">
       <div class="column"></div>
       <div class="column is-one-third">
@@ -162,10 +162,7 @@
 
 
   
-.label__contact{
-  color: #2d334a;
 
-}
 
 
 
@@ -175,44 +172,18 @@
     color: #2d334a;
   }
 
-  .subtitle{
-    text-align: center;
-    color: #2d334a;
-  }
+  .title-section{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.6rem;
+  text-align: center;
+
+}
 
 
-
-
-  .btn-contact{
-    height: auto;
-    width: auto;
-    margin: 36px;
-  }
-
-  
-
-
-  .custom-component {
-        background-color: #fffffe;
-    }
-
-  :global(body.dark-mode) .custom-component {
-        background-color: #2d334a;
-        color: #fffffe;
-    }
 
 .custom-title{
   color:#0f0e17;
   text-align: center;
-}
-
-:global(body.dark-mode) .custom-title {
-        text-align: center;
-        color: #fffffe;
-    }
-
-.custom-form {
-        color: #2d334a;
 }
 
 
@@ -228,40 +199,17 @@
 
 
 
-:global(body.dark-mode) .custom-button {
-
-  background-color: #ff8906;
-    border: none;
-    color: #fffffe;
-    width: 105px;
-    margin-bottom: 15px;
-
-}
 
 
 .custom-input{
 border-color:#1f1235 ;
 }
 
-:global(body.dark-mode) .custom-input {
-
-
-}
 
 .custom-label{
   color: #1f1235;
   
 
-}
-
-:global(body.dark-mode) .custom-label {
-
-color: white;
-}
-
-:global(body.dark-mode) .custom-text {
-        color: #f0f0f0;
-        text-align: justify;
 }
 .custom-text{
   text-align: justify;
@@ -274,18 +222,6 @@ color: white;
 .custom-message{
   color: green;
   text-align: center;
-}
-
-
-:global(body.dark-mode) .custom-message {
-        color: #f0f0f0;
-        text-align: center;
-}
-
-
-.captcha-format{
-  margin-top: 36px;
-  margin-left: 13px;
 }
 
 

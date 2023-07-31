@@ -65,7 +65,7 @@
   .home-section {
     /* clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 81%); */
     background-color: #fffffe;
-    background-image: url(../../portfolio/img/neom-StbFt6TU1xs-unsplash.webp);
+    background-image: url(../../portfolio/img/ahmed-LKSGP7Jqqbw-unsplash.jpg);
     background-size: cover;
     background-position: center center;
       }
@@ -100,9 +100,4 @@ background-color: #e3f6f5;
   }
 
 
-
-  .background-img img{
-    width: auto;
-    height: auto;
-  }
 </style>

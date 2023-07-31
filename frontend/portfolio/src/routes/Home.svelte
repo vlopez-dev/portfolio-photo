@@ -8,8 +8,8 @@
     
     <div class="column is-half ">
         <div class="container"  >
-            <h1 class="title">Hello</h1>
-            <p class="subtitle">I'm Nicolas Ladino</p>
+            <!-- <h1 class="title">Hello</h1>
+            <p class="subtitle">I'm Nicolas Ladino</p> -->
         </div>
     </div>
 
@@ -34,7 +34,7 @@
 
 .subtitle{
     color: #272343;
-    font-family: 'Hind', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 3.6rem;
     text-align: center;
     /* line-height: 1.70rem; */
