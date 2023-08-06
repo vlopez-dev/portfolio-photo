@@ -33,7 +33,7 @@
   item4="About"
   ></Nav>
 
-<section use:scrollRef={'home'} id="Home" class=" home-section hero is-fullheight custom-component">
+<section use:scrollRef={'home'} id="Home" class=" home-section hero is-halfheight custom-component">
   <Home></Home>
 </section>
 
@@ -65,9 +65,12 @@
   .home-section {
     /* clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 81%); */
     background-color: #fffffe;
-    background-image: url(../../portfolio/img/ahmed-LKSGP7Jqqbw-unsplash.jpg);
+    background-image: url(../../portfolio/img/kim-becker2.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-position: center center;
+    
       }
 
       @media screen and (max-width: 768px) {

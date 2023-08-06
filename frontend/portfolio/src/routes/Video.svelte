@@ -11,7 +11,7 @@
          
          
           <div class="column is-4">
-            <div class="gallery-item box" data-index="">
+            <div class="gallery-item " data-index="">
                 <video controls autoplay >
                   <source src="../../video/istockphoto-1175207653-640_adpp_is.mp4" type="video/mp4">
                 </video>
@@ -19,14 +19,14 @@
             </div>
           </div>
           <div class="column is-4">
-            <div class="gallery-item box" data-index="">
+            <div class="gallery-item " data-index="">
                 <video controls autoplay >
                   <source src="../../video/168811 (720p).mp4" type="video/mp4">
                 </video>
             </div>
           </div>
           <div class="column is-4">
-            <div class="gallery-item box" data-index="">
+            <div class="gallery-item " data-index="">
                 <video controls autoplay >
                   <source src="../../video/160767 (720p).mp4" type="video/mp4">
                 </video>
@@ -55,6 +55,8 @@ font-size: 2.6rem;
 
     .gallery-item {
     cursor: pointer;
+    box-shadow: 0 30px 30px -30px rgba(27, 26, 26, 0.315);
+
   }
 
   .gallery-item img {
