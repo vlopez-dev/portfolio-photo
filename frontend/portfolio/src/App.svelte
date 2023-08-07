@@ -83,12 +83,12 @@
   .section-video{
     /* clip-path: polygon(0 0, 100% 19%, 100% 100%, 0 100%); */
     
-    background-color: #e3f6f5;
+    background-color: #fffffe;
 
   }
 
   .photo-gallery {
-    background-color: #e3f6f5;;
+    background-color: #fffffe;
   }
 
 
@@ -99,7 +99,7 @@
   }
   .contact-section{
 
-background-color: #e3f6f5;
+background-color: #fffffe;
   }
 
 

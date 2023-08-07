@@ -127,8 +127,8 @@ font-size: 2.6rem;
 
   .album-info button {
     padding: 10px 20px;
-    background-color: #ffd803;
-    color: #272343;
+    background-color: #6246ea;
+    color: #fffffe;
     border: none;
     cursor: pointer;
   }

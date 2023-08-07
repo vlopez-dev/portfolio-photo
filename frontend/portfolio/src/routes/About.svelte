@@ -46,7 +46,7 @@
    }
 
    figure{
-    background-color: #ffd803;
+    background-color: #d1d1e9;
     border-radius: 3% 97% 0% 100% / 0% 99% 1% 100% ;
     /* fancyborder */
    }

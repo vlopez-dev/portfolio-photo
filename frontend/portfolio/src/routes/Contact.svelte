@@ -189,9 +189,9 @@
 
 
 .custom-button{
-  background-color: #ffd803;
+  background-color: #6246ea;
     border: none;
-    color: #272343;
+    color: #fffffe;
     width: 105px;
     margin-bottom: 15px;
 
@@ -240,7 +240,7 @@ button:hover {
 }
 
 .form-contact{
-  background-color: #fffffe;
+  background-color: #d1d1e9;
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 30px 30px -30px rgba(27, 26, 26, 0.315);
