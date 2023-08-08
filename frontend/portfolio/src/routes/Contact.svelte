@@ -102,7 +102,7 @@
           <div class="custom-message" id="message"></div>
 
         </div>
-        <form class="mt-6 form-contact" action="" >
+        <form class="form-contact" action="" >
           <div class="title">Contact</div>
         <div class="field">
           <label class="label custom-label">Email</label>
@@ -167,7 +167,7 @@
 
 
 .title {
-    font-family: "Karla", sans-serif;
+  font-family:'Montserrat', sans-serif;
     text-align: center;
     color: #2d334a;
   }
@@ -193,7 +193,8 @@
     border: none;
     color: #fffffe;
     width: 105px;
-    margin-bottom: 15px;
+    margin-bottom: 36px;
+    margin-top: 36px;
 
 }
 
@@ -241,9 +242,11 @@ button:hover {
 
 .form-contact{
   background-color: #d1d1e9;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 30px 30px -30px rgba(27, 26, 26, 0.315);
+  padding: 50px;
+  background: #fffffe;
+  box-shadow:  20px 20px 60px #d9d9d8,
+              -20px -20px 60px #ffffff;
+              border-radius: 5px;
 
 }
   </style>
