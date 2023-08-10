@@ -73,7 +73,7 @@ function handleScroll(event) {
 
         <a class="navbar-item btn" use:scrollTo={{ref:'photo',duration:1000}} href="#Photo">{item1}</a>
         <a class="navbar-item btn" use:scrollTo={{ref:'video',duration:1000}} href="#Video">{item2}</a>
-        <a class="navbar-item btn "use:scrollTo={{ref:'about',duration:1000}} href="#About">{item4}</a>
+        <a class="navbar-item btn"use:scrollTo={{ref:'about',duration:1000}} href="#About">{item4}</a>
 
         <a class="navbar-item btn"  use:scrollTo={{ref:'contact',duration:1000}} href="#Contact">{item3}</a>
 
@@ -92,6 +92,15 @@ function handleScroll(event) {
 
 .navbar-item{
   font-family: 'Montserrat', sans-serif;
+}
+a:hover{
+  background-color: #d1d1e9;
+  /* border-radius: 20px; */
+  color: white;
+  padding: 5px 20px;
+  letter-spacing: 0.12rem;
+  text-transform: uppercase;
+  transition: 0.5s;
 }
 
   
