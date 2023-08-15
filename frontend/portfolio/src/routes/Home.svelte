@@ -2,23 +2,6 @@
 
 </script>
 
-<!-- 
-<div class="columns is-multiline mx-2 my-6 is-flex is-flex-direction-column  mt-6" >
-<div class="column"></div>
-    
-    <div class="column is-half ">
-        <div class="container"  >
-           
-        </div>
-    </div>
-
-    <div class="column is-flex is-flex-direction-column">
-        <div class="container">
-        </div>
-    </div>
-    <div class="column"></div>
-</div> -->
-
 <div class="hero-body">
     <div class="">
       <p class="title">
