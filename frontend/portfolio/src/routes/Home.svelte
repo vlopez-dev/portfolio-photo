@@ -2,14 +2,13 @@
 
 </script>
 
-
+<!-- 
 <div class="columns is-multiline mx-2 my-6 is-flex is-flex-direction-column  mt-6" >
 <div class="column"></div>
     
     <div class="column is-half ">
         <div class="container"  >
-            <!-- <h1 class="title">Hello</h1>
-            <p class="subtitle">I'm Nicolas Ladino</p> -->
+           
         </div>
     </div>
 
@@ -18,7 +17,18 @@
         </div>
     </div>
     <div class="column"></div>
-</div>
+</div> -->
+
+<div class="hero-body">
+    <div class="">
+      <p class="title">
+        Fullheight hero
+      </p>
+      <p class="subtitle">
+        Fullheight subtitle
+      </p>
+    </div>
+  </div>
 
 
 <style>

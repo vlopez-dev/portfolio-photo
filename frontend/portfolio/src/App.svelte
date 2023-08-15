@@ -33,7 +33,7 @@
   item4="About"
   ></Nav>
 
-<section use:scrollRef={'home'} id="Home" class=" home-section hero is-halfheight custom-component">
+<section use:scrollRef={'home'} id="Home" class=" home-section hero is-large  custom-component">
   <Home></Home>
 </section>
 
@@ -65,11 +65,12 @@
   .home-section {
     /* clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 81%); */
     background-color: #fffffe;
-    background-image: url(../../portfolio/img/kim-becker2.jpg);
+    background-image: url(../../portfolio/img/jessica-favaro-ycZxjWxFBMk-unsplash.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
+    height: 80%;
     
       }
 

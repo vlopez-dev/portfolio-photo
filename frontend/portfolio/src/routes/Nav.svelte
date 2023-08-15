@@ -96,6 +96,7 @@ function handleScroll(event) {
 a:hover{
   background-color: #d1d1e9;
   /* border-radius: 20px; */
+
   color: white;
   padding: 5px 20px;
   letter-spacing: 0.12rem;
