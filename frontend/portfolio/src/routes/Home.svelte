@@ -6,7 +6,7 @@ import Gallery from "./Gallery.svelte";
 
 
 </script>
-<section class="home-section">
+<section class="home-section hero is-fullheight custom-component">
 <div class="hero-body ">
     <div class="">
       <p class="title">
