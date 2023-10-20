@@ -9,12 +9,17 @@
   import Video from './routes/Video.svelte';
   import About from './routes/About.svelte';
   import Router from "svelte-spa-router"
+  import Album from './routes/Album.svelte';
 
 
   let routes={
-  "/":Gallery,
+  "/":Home,
+  "/gallery":Gallery,
   "/video":Video,
+  "/about":About,
   "/contact":Contact,
+  "/album":Album,
+
 
 }
 
@@ -33,22 +38,8 @@
   item4="About"
   ></Nav>
 
-<section use:scrollRef={'home'} id="Home" class=" home-section hero is-large  custom-component">
-  <Home></Home>
-</section>
 
-<section use:scrollRef={'photo'} id="Photo" class="photo-gallery hero is-fullheight custom-component">
-  <Gallery> </Gallery>
-</section>
-<section use:scrollRef={'video'} id="Video" class=" section-video hero is-fullheight custom-component">
-  <Video></Video>
-</section>
-<section use:scrollRef={'about'} id="About" class=" about-section hero is-fullheight custom-component mt-6" >
-  <About></About>
-</section>
-<section use:scrollRef={'contact'} id="Contact" class=" contact-section hero is-fullheight custom-component">
-  <Contact></Contact>
-</section>
+<Router {routes}></Router>
 
 
 <Footer></Footer>

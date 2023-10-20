@@ -1,8 +1,13 @@
 <script>
+  import About from "./About.svelte";
+  import Contact from "./Contact.svelte";
+import Gallery from "./Gallery.svelte";
+  import Video from "./Video.svelte";
+
 
 </script>
-
-<div class="hero-body">
+<section class="home-section">
+<div class="hero-body ">
     <div class="">
       <p class="title">
         Fullheight hero
@@ -12,8 +17,11 @@
       </p>
     </div>
   </div>
-
-
+</section>
+<Gallery></Gallery>
+<Video></Video>
+<About></About>
+<Contact></Contact>
 <style>
 
 .title{
@@ -33,4 +41,25 @@
     /* line-height: 1.70rem; */
 
     }
+
+
+    .home-section {
+    /* clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 81%); */
+    background-color: #fffffe;
+    background-image: url(https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    height: 80%;
+    
+      }
+
+      @media screen and (max-width: 768px) {
+        .home-section {
+        background-size: cover;
+        background-position: center center;
+    }
+}
+
 </style>

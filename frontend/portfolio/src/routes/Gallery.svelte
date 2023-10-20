@@ -1,4 +1,6 @@
 <script>
+import {push, pop, replace} from 'svelte-spa-router'
+
     import { onMount } from "svelte";
     function handleClick(e) {
 		console.log(e.detail.src)
@@ -14,7 +16,7 @@
                 <img src="https://images.unsplash.com/photo-1689776574086-50ff04ae5dec?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="" />
                 <div class="album-info">
                   <h3>Nombre del álbum 1</h3>
-                  <button>Ver detalles</button>
+                  <button on:click={() => push('/album')} >Ver detalles</button>
                 </div>
               </figure>
             </div>
