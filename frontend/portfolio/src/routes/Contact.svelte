@@ -91,7 +91,7 @@
 
 
 </script>
-      
+      <section class="section">
     <div class="columns is-multiline mx-2 my-6">
       <div class="column"></div>
       <div class="column is-one-third">
@@ -151,7 +151,7 @@
 
     </div>
 
-
+  </section>
 
 
 

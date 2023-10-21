@@ -4,6 +4,21 @@
 import Gallery from "./Gallery.svelte";
   import Video from "./Video.svelte";
 
+ let showHome = true;
+    let showNav = true;
+    let showGallery = true;
+    let showFooter = true;
+    let showContact = true;
+    let showVideo = true;
+    let showAbout = true;
+
+  function scrollToComponent(component) {
+        const targetComponent = document.getElementById(component);
+        if (targetComponent) {
+            targetComponent.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
 
 </script>
 <section class="home-section hero is-fullheight custom-component">
@@ -18,10 +33,22 @@ import Gallery from "./Gallery.svelte";
     </div>
   </div>
 </section>
+<section>
 <Gallery></Gallery>
+</section>
+<section>
 <Video></Video>
+</section>
+<section>
 <About></About>
+</section>
+<section>
 <Contact></Contact>
+</section>
+
+
+
+
 <style>
 
 .title{

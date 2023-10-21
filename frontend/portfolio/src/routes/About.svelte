@@ -1,6 +1,6 @@
 
 
-<section class="section">
+<section class="section hero is-fullheight custom-component">
     <div class="container">
         <h2 class="title title-section">About me</h2>
     </div>

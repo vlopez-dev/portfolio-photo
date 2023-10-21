@@ -4,7 +4,7 @@
 		console.log(e.detail.src)
 	}
 </script>
-<section class="section">
+<section class="section ">
     <div class="container">
       <h2 class="title title-section ">Video</h2>
       <div class="columns is-multiline">
