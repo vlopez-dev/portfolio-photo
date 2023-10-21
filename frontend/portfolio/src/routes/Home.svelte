@@ -1,4 +1,5 @@
 <script>
+      import { scrollTo, scrollRef, scrollTop } from 'svelte-scrolling'
   import About from "./About.svelte";
   import Contact from "./Contact.svelte";
 import Gallery from "./Gallery.svelte";
@@ -21,7 +22,7 @@ import Gallery from "./Gallery.svelte";
 
 
 </script>
-<section class="home-section hero is-fullheight custom-component">
+<section  use:scrollRef={'home'} id="Home" class=" home-section hero is-large  custom-component" >
 <div class="hero-body ">
     <div class="">
       <p class="title">
@@ -33,16 +34,16 @@ import Gallery from "./Gallery.svelte";
     </div>
   </div>
 </section>
-<section>
+<section use:scrollRef={'photo'} id="Photo" class="photo-gallery hero is-fullheight custom-component">
 <Gallery></Gallery>
 </section>
-<section>
+<section use:scrollRef={'video'} id="Video" class=" section-video hero is-fullheight custom-component">
 <Video></Video>
 </section>
-<section>
+<section use:scrollRef={'about'} id="About" class=" about-section hero is-fullheight custom-component mt-6">
 <About></About>
 </section>
-<section>
+<section use:scrollRef={'contact'} id="Contact" class=" contact-section hero is-fullheight custom-component">
 <Contact></Contact>
 </section>
 
