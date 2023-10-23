@@ -18,7 +18,7 @@
   "/video":Video,
   "/about":About,
   "/contact":Contact,
-  "/album":Album,
+  "/album/:id":Album,
 
 
 }

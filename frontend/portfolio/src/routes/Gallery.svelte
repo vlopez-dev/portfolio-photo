@@ -1,5 +1,6 @@
 <script>
 import {push, pop, replace} from 'svelte-spa-router'
+import albums from '../albums'
 
     import { onMount } from "svelte";
     function handleClick(e) {
@@ -10,63 +11,24 @@ import {push, pop, replace} from 'svelte-spa-router'
     <div class="container">
       <h2 class="title title-section">Photo</h2>
       <div class="columns is-multiline">
+        {#each albums as album,i}
+          
           <div class="column is-4">
             <div class="gallery-item " data-index="">
               <figure class="image is-square">
-                <img src="https://images.unsplash.com/photo-1689776574086-50ff04ae5dec?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="" />
+                <img src="{album.cover}" alt="" />
                 <div class="album-info">
-                  <h3>Nombre del álbum 1</h3>
-                  <button on:click={() => push('/album')} >Ver detalles</button>
+                  <h3>{album.title}</h3>
+                  <button on:click={() => push('/album/:{i}')} >Ver detalles</button>
                 </div>
               </figure>
             </div>
           </div>
-          <div class="column is-4">
-            <div class="gallery-item " data-index="">
-              <figure class="image is-square">
-                <img src="https://images.unsplash.com/photo-1545341425-ee53bbfd2653?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="" />
-                <div class="album-info">
-                  <h3>Nombre del álbum 1</h3>
-                  <button>Ver detalles</button>
-                </div>
-              </figure>
-            </div>
-          </div>
-          <div class="column is-4">
-            <div class="gallery-item " data-index="">
-              <figure class="image is-square">
-                <img src="https://images.unsplash.com/photo-1689851709772-aa131deb6e2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="" />
-                <div class="album-info">
-                  <h3>Nombre del álbum 1</h3>
-                  <button>Ver detalles</button>
-                </div>
-              </figure>
-            </div>
-          </div>
-          <div class="column is-4">
-            <div class="gallery-item " data-index="">
-              <figure class="image is-square">
-                <img src="https://images.unsplash.com/photo-1689192092151-5d8984fdd21d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="" />
-                <div class="album-info">
-                  <h3>Nombre del álbum 1</h3>
-                  <button>Ver detalles</button>
-                </div>
-              </figure>
-              
-            </div>
-          </div>
-          <div class="column is-4">
-            <div class="gallery-item " data-index="">
-              <figure class="image is-square">
-                <img src="../../img/christopher-campbell-rDEOVtE7vOs-unsplash.jpg" alt="" />
-                <div class="album-info">
-                  <h3>Nombre del álbum 1</h3>
-                  <button>Ver detalles</button>
-                </div>
-              </figure>
-              
-            </div>
-          </div>
+          {/each}
+
+         
+          
+          
       </div>
     </div>
   </section>

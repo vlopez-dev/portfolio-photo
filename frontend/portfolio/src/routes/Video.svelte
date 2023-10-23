@@ -1,4 +1,6 @@
 <script>
+  import videos from '../videos'
+
     import { onMount } from "svelte";
     function handleClick(e) {
 		console.log(e.detail.src)
@@ -9,29 +11,19 @@
       <h2 class="title title-section ">Video</h2>
       <div class="columns is-multiline">
          
-         
+        {#each videos as video,i}
+
           <div class="column is-4">
             <div class="gallery-item " data-index="">
                 <video controls autoplay >
-                  <source src="../../video/istockphoto-1175207653-640_adpp_is.mp4" type="video/mp4">
+                  <source src="{video.cover}">
                 </video>
                
             </div>
           </div>
-          <div class="column is-4">
-            <div class="gallery-item " data-index="">
-                <video controls autoplay >
-                  <source src="../../video/168811 (720p).mp4" type="video/mp4">
-                </video>
-            </div>
-          </div>
-          <div class="column is-4">
-            <div class="gallery-item " data-index="">
-                <video controls autoplay >
-                  <source src="../../video/160767 (720p).mp4" type="video/mp4">
-                </video>
-            </div>
-          </div>
+          {/each}
+
+       
       </div>
     </div>
   </section>
