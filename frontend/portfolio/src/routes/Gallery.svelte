@@ -19,7 +19,7 @@ import albums from '../albums'
                 <img src="{album.cover}" alt="" />
                 <div class="album-info">
                   <h3>{album.title}</h3>
-                  <button on:click={() => push('/album/:{i}')} >Ver detalles</button>
+                  <button on:click={() => push(`/album/${i}`)}>Ver detalles</button>
                 </div>
               </figure>
             </div>
