@@ -11,20 +11,20 @@ import albums from '../albums'
     <div class="container">
       <h2 class="title title-section">Photo</h2>
       <div class="columns is-multiline">
-        {#each albums as album,i}
+        <!-- {#each albums as album,i} -->
           
           <div class="column is-4">
             <div class="gallery-item " data-index="">
               <figure class="image is-square">
-                <img src="{album.cover}" alt="" />
+                <img src="../img/1.jpg" alt="" />
                 <div class="album-info">
-                  <h3>{album.title}</h3>
+                  <h3></h3>
                   <button on:click={() => push(`/album/${i}`)}>Ver detalles</button>
                 </div>
               </figure>
             </div>
           </div>
-          {/each}
+          <!-- {/each} -->
 
          
           

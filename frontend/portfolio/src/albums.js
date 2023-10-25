@@ -2,9 +2,7 @@ export default[
     {
         id:'1',
         title:'Cars',
-        cover:'https://images.unsplash.com/photo-1694889649275-6026059d3887?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8OHx8fGVufDB8fHx8fA%3D%3D'
-
-        
+        cover:''
         
     },
     {

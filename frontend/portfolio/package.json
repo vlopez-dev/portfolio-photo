@@ -21,6 +21,7 @@
     "bigger-picture": "^1.1.12",
     "lightgallery": "^2.7.2",
     "macy": "^2.5.1",
+    "photoswipe": "^5.4.2",
     "svelte-feather-icons": "^4.0.1",
     "svelte-image-gallery": "^1.7.0",
     "svelte-scrolling": "^1.2.2",
