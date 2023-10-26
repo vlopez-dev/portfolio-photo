@@ -1,45 +1,44 @@
-
 <script>
-    import { onMount } from "svelte";
+     import { 
+        Lightbox,
+        LightboxGallery,
+        GalleryThumbnail,
+        GalleryImage
+    } from 'svelte-lightbox'
+    
+    let lightboxProgrammaticController
     import albums from '../albums'
 
-import PhotoSwipeLightbox from 'photoswipe/lightbox';
-import 'photoswipe/style.css';
-export let galleryID;
-
-
-onMount(() => {
-    let lightbox = new PhotoSwipeLightbox({
-      gallery: '#' + galleryID,
-      children: 'a',
-      showHideAnimationType: 'zoom',
-      pswpModule: () => import('photoswipe'),
-    });
-    lightbox.init();})
-
-
-
-
-
-    
 </script>
-<div class="section">
-  <div class="columns">
-    <div class="column">
-      <div  class="pswp-gallery" id={galleryID}>
+
+
+<section class="section">
+
+<div class="columns is-multiline" style="outline: 2px solid red;">
+
+<LightboxGallery>
+    <svelte:fragment slot="thumbnail">
         {#each albums as album}
-        <a
-              href={album.cover}
-              
-              data-pswp-width={album.width}
-              data-pswp-height={album.height}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img src="{album.thumbnailURL}" alt="" />
-              </a>
-        {/each}
+        <div class="column is-4 " >
+            <GalleryThumbnail>
+                <img src="{album.thumbnailURL}" alt="Simple lightbox">
+            </GalleryThumbnail>
         </div>
-    </div>
-  </div>
+        {/each}
+
+        
+    </svelte:fragment>
+    
+    <GalleryImage>
+        <img src="./image-0.jpg" alt="Simple lightbox">
+    </GalleryImage>
+    <GalleryImage>
+        <img src="./image-1.jpg" alt="Simple lightbox">
+    </GalleryImage>
+    <GalleryImage>
+        <img src="./image-2.jpg" alt="Simple lightbox">
+    </GalleryImage>
+</LightboxGallery>
 </div>
+
+</section>
