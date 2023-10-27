@@ -14,30 +14,34 @@
 
 <section class="section">
 
-<div class="columns is-multiline" style="outline: 2px solid red;">
+<div class="columns  is-4 is-multiline " >
 
 <LightboxGallery>
     <svelte:fragment slot="thumbnail">
         {#each albums as album}
-        <div class="column is-4 " >
+        {#each album.imagenes as imagen}
+        <div class="column is-2 " >
             <GalleryThumbnail>
-                <img src="{album.thumbnailURL}" alt="Simple lightbox">
+                <img src="{imagen.thumbnailURL}" alt="Simple lightbox">
             </GalleryThumbnail>
         </div>
         {/each}
 
+        {/each}
+
         
     </svelte:fragment>
-    
+    {#each albums as album}
+    {#each album.imagenes as imagen}
+
+   
     <GalleryImage>
-        <img src="./image-0.jpg" alt="Simple lightbox">
+        <img src="{imagen.imageurl}" alt="Simple lightbox">
     </GalleryImage>
-    <GalleryImage>
-        <img src="./image-1.jpg" alt="Simple lightbox">
-    </GalleryImage>
-    <GalleryImage>
-        <img src="./image-2.jpg" alt="Simple lightbox">
-    </GalleryImage>
+    {/each}
+
+    {/each}
+
 </LightboxGallery>
 </div>
 
