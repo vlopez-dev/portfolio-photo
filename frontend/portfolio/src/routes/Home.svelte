@@ -1,9 +1,29 @@
 <script>
+  
+  import { onMount } from "svelte";
+
       import { scrollTo, scrollRef, scrollTop } from 'svelte-scrolling'
   import About from "./About.svelte";
   import Contact from "./Contact.svelte";
 import Gallery from "./Gallery.svelte";
   import Video from "./Video.svelte";
+
+
+  let home=[];
+
+
+
+  onMount(async () => {
+    try{
+      const[homeResponse] = await Promise.all([
+        fetch("http://127.0.0.1:8000/about/").then((response) => response.json()),
+      ]);
+      home = homeResponse;
+      console.log(home)
+    }catch(error){
+      console.log(error);
+    }
+  });
 
  let showHome = true;
     let showNav = true;

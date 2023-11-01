@@ -14,6 +14,7 @@ export default[
                 height:427,
                 imageurl:'../../img/img1.jpg'
             }
+            
         ],
 
 
@@ -67,18 +68,26 @@ export default[
     {
         id:'4',
         title:'Experimental',
-        cover:'../../img/experimentalcover.jpg',
+        cover:'../../img/1e.jpg',
         width:640,
         height:427,
         imagenes: [
             {
                 id:1,
-                title:'Cars',
-                thumbnailURL:'../../img/t1.jpg',
+                title:'Experimental',
+                thumbnailURL:'../../img/experimentalcover.jpg',
                 width:640,
                 height:427,
-                imageurl:'../../img/1.jpg'
-            }
+                imageurl:'../../img/1e.jpg'
+            },
+            {
+                id:2,
+                title:'Experimental',
+                thumbnailURL:'../../img/2ecover.jpg',
+                width:640,
+                height:427,
+                imageurl:'../../img/2e.jpg'
+            },
         ],
 
 
