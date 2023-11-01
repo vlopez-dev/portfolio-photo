@@ -8,6 +8,9 @@ from . import views
 
 router = routers.DefaultRouter()
 router.register(r'home', views.HomeViewSet)
+router.register(r'album', views.AlbumViewSet)
+router.register(r'image', views.ImageViewSet)
+
 
 
 
