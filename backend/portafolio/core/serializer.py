@@ -10,13 +10,13 @@ class HomeSerializer(serializers.ModelSerializer):
 
 
 class AlbumSerializer(serializers.ModelSerializer):
-    albums = serializers.SerializerMethodField()
+    images = serializers.SerializerMethodField()
 
     class Meta:
         model = Album
-        fields = "__all__"
+        fields = ('id', 'title', 'coveralbum','images')
 
-    def get_albums(self, obj):
+    def get_images(self, obj):
             images_ids = obj.images.values_list('id', flat=True)
             images = Image.objects.filter(id__in=images_ids)
             return [{'id': i.id, 'image': i.image,'thumbnai':i.thumbnai} for i in images]
