@@ -1,11 +1,38 @@
 <script>
 import {push, pop, replace} from 'svelte-spa-router'
-import albums from '../albums'
+import { getContext } from "svelte";
+import { onMount } from "svelte";
 
-    import { onMount } from "svelte";
+
+let albums=[];
+let albumId;
+let images = [];
+
+
     function handleClick(e) {
 		console.log(e.detail.src)
 	}
+
+
+const params = getContext("params");
+  if (params) {
+    albumId = params.albumId;
+  }
+
+
+  onMount(async () => {
+    try{
+      const[albumResponse] = await Promise.all([
+        fetch("http://127.0.0.1:8000/album/").then((response) => response.json()),
+      ]);
+      albums = albumResponse;
+      console.log(albums)
+    }catch(error){
+      console.log(error);
+    }
+  });
+
+
 </script>
 <section class="section ">
     <div class="container">
@@ -16,10 +43,10 @@ import albums from '../albums'
           <div class="column is-4">
             <div class="gallery-item " data-index="">
               <figure class="image is-square">
-                <img src="{album.cover}" alt="" />
+                <img src="{album.coveralbum}" alt="" />
                 <div class="album-info">
-                  <h3>{album.title}</h3>
-                  <button on:click={() => push(`/album/${i}`)}>Ver detalles</button>
+                  <h3>{album.name}</h3>
+                  <button on:click={() => push(`/album/${album.id}`)}>Ver detalles</button>
                 </div>
               </figure>
             </div>

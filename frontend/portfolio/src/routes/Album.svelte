@@ -5,40 +5,55 @@
     GalleryThumbnail,
     GalleryImage,
   } from "svelte-lightbox";
+  import { onMount } from "svelte";
+  import { getContext } from "svelte";
+  import { each } from "svelte/internal";
 
-  let lightboxProgrammaticController;
-  import albums from "../albums";
 
-  function hasImages(albums) {
-    return albums.every(album => album.cover !== null);
-  }
+let albumId=7;
+let album = [];
+
+
+  onMount(async () => {
+    try {
+      const [albumResponse] = await Promise.all([
+        fetch(`http://127.0.0.1:8000/album/${albumId}`).then((response) => response.json()),
+      ]);
+
+      album = albumResponse;
+      console.log(album);  // Asegúrate de que estás viendo las imágenes específicas del álbum en la consola
+    } catch (error) {
+      console.error(error);
+    }
+  });
+
+
+
+
+
+
 </script>
 
-{#if albums.length > 0 && hasImages(albums)}
   <section class="section">
     <div class="columns is-4 is-multiline">
       <LightboxGallery>
         <svelte:fragment slot="thumbnail">
-          {#each albums as album}
-            {#each album.imagenes as imagen}
               <div class="column is-2">
+                {#if album && album.images && album.images.length > 0}
+                {#each album.images as image}
                 <GalleryThumbnail>
-                  <img src={imagen.thumbnailURL} alt="Simple lightbox" />
+                  <img src="{image.thumbnail}" alt="Simple lightbox" />
                 </GalleryThumbnail>
+                {/each}
+                {:else}
+                <p>No hay imágenes disponibles.</p>
+                {/if}
               </div>
-            {/each}
-          {/each}
         </svelte:fragment>
 
-        
-        {#each albums as album}
-          {#each album.imagenes as imagen}
             <GalleryImage>
-              <img src={imagen.imageurl} alt="Simple lightbox" />
+              <img src="" alt="Simple lightbox" />
             </GalleryImage>
-          {/each}
-        {/each}
       </LightboxGallery>
     </div>
   </section>
-{/if}

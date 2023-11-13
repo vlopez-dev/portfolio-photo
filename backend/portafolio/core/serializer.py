@@ -2,6 +2,11 @@ from django.conf import settings
 from .models import Album, Home, Image, Video
 from rest_framework import serializers
 
+class ImageSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Image
+        fields = ('id', 'name', 'picture','thumbnail')
+
 
 class HomeSerializer(serializers.ModelSerializer):
     class Meta:
@@ -14,17 +19,13 @@ class AlbumSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Album
-        fields = ('id', 'title', 'coveralbum','images')
+        fields = ('id', 'name', 'coveralbum','images')
 
     def get_images(self, obj):
-            images_ids = obj.images.values_list('id', flat=True)
-            images = Image.objects.filter(id__in=images_ids)
-            return [{'id': i.id, 'image': i.image,'thumbnai':i.thumbnai} for i in images]
+            image_ids = obj.images.values_list('id', flat=True)
+            images = Image.objects.filter(id__in=image_ids)
+            return[{'id':t.id,'name':t.name,'picture':t.picture.url,'description':t.description,'thumbnail':t.thumbnail.url} for t in images]
 
-class ImageSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Image
-        fields = "__all__"
 
 
 class VideoSerializer(serializers.ModelSerializer):

@@ -27,7 +27,7 @@ class HomeViewSet(viewsets.ModelViewSet):
 
 
 class AlbumViewSet(viewsets.ModelViewSet):
-    queryset = Album.objects.all()
+    queryset = Album.objects.all().order_by('id')
     serializer_class = AlbumSerializer
     template_name = "core/index.html"
 
@@ -38,8 +38,3 @@ class AlbumViewSet(viewsets.ModelViewSet):
             {"serializer": serializer, "album": album}, template_name="index.html"
         )
 
-
-class ImageViewSet(viewsets.ModelViewSet):
-    queryset = Image.objects.all()
-    serializer_class = ImageSerializer
-    template_name = "core/index.html"

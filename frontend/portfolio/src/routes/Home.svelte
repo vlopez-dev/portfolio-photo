@@ -7,6 +7,7 @@
   import Contact from "./Contact.svelte";
 import Gallery from "./Gallery.svelte";
   import Video from "./Video.svelte";
+  import { each } from "svelte/internal";
 
 
   let home=[];
@@ -16,7 +17,7 @@ import Gallery from "./Gallery.svelte";
   onMount(async () => {
     try{
       const[homeResponse] = await Promise.all([
-        fetch("http://127.0.0.1:8000/about/").then((response) => response.json()),
+        fetch("http://127.0.0.1:8000/home/").then((response) => response.json()),
       ]);
       home = homeResponse;
       console.log(home)
@@ -43,14 +44,17 @@ import Gallery from "./Gallery.svelte";
 
 </script>
 <section  use:scrollRef={'home'} id="Home" class=" home-section hero is-large  custom-component" >
+  
 <div class="hero-body ">
     <div class="">
+      {#each home as data}
       <p class="title">
-        Fullheight hero
+        {data.title}
       </p>
       <p class="subtitle">
-        Fullheight subtitle
+        {data.subtitle}
       </p>
+      {/each}
     </div>
   </div>
 </section>
