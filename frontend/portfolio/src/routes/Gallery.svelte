@@ -38,7 +38,7 @@ const params = getContext("params");
     <div class="container">
       <h2 class="title title-section">Photo</h2>
       <div class="columns is-multiline">
-        {#each albums as album,i}
+        {#each albums as album}
           
           <div class="column is-4">
             <div class="gallery-item " data-index="">

@@ -21,7 +21,7 @@ let album = [];
       ]);
 
       album = albumResponse;
-      console.log(album);  // Asegúrate de que estás viendo las imágenes específicas del álbum en la consola
+      console.log(album.images);  // Asegúrate de que estás viendo las imágenes específicas del álbum en la consola
     } catch (error) {
       console.error(error);
     }
@@ -40,17 +40,17 @@ let album = [];
         <svelte:fragment slot="thumbnail">
               <div class="column is-2">
                 {#if album && album.images && album.images.length > 0}
-                {#each album.images as image}
+                  {#each album.images as image}
                 <GalleryThumbnail>
                   <img src="{image.thumbnail}" alt="Simple lightbox" />
                 </GalleryThumbnail>
-                {/each}
+                  {/each}
                 {:else}
                 <p>No hay imágenes disponibles.</p>
                 {/if}
               </div>
         </svelte:fragment>
-
+        
             <GalleryImage>
               <img src="" alt="Simple lightbox" />
             </GalleryImage>
