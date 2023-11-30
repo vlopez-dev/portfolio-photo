@@ -6,24 +6,30 @@
     GalleryImage,
   } from "svelte-lightbox";
   import { onMount } from "svelte";
-  import { getContext } from "svelte";
-  import { each } from "svelte/internal";
+  import { selectedAlbumId } from ".././routes/store.js";
 
 
-let albumId=7;
+
+let albumId;
 let album = [];
 
-
+const unsubscribe = selectedAlbumId.subscribe(value => {
+    albumId = value;
+    console.log("Album ID en Album.svelte:", albumId);
+    console.log("Selected Album ID:", $selectedAlbumId);
+  });
   onMount(async () => {
-    try {
-      const [albumResponse] = await Promise.all([
-        fetch(`http://127.0.0.1:8000/album/${albumId}`).then((response) => response.json()),
-      ]);
+    if (albumId) {
+      try {
+        const [albumResponse] = await Promise.all([
+          fetch(`http://127.0.0.1:8000/album/${albumId}`).then((response) => response.json()),
+        ]);
 
-      album = albumResponse;
-      console.log(album.images);  // Asegúrate de que estás viendo las imágenes específicas del álbum en la consola
-    } catch (error) {
-      console.error(error);
+        album = albumResponse;
+        console.log(album.images);  // Asegúrate de que estás viendo las imágenes específicas del álbum en la consola
+      } catch (error) {
+        console.error(error);
+      }
     }
   });
 

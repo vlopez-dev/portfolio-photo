@@ -2,22 +2,14 @@
 import {push, pop, replace} from 'svelte-spa-router'
 import { getContext } from "svelte";
 import { onMount } from "svelte";
+import { writable } from 'svelte/store';
 
 
 let albums=[];
 let albumId;
 let images = [];
 
-
-    function handleClick(e) {
-		console.log(e.detail.src)
-	}
-
-
-const params = getContext("params");
-  if (params) {
-    albumId = params.albumId;
-  }
+let selectedAlbumId = writable(null);
 
 
   onMount(async () => {
@@ -46,7 +38,14 @@ const params = getContext("params");
                 <img src="{album.coveralbum}" alt="" />
                 <div class="album-info">
                   <h3>{album.name}</h3>
-                  <button on:click={() => push(`/album/${album.id}`)}>Ver detalles</button>
+                  <button on:click={() => {
+
+                    selectedAlbumId.set(album.id)
+                    console.log("Selected Album ID:", $selectedAlbumId);
+
+
+                    push(`/album/${album.id}`);
+                  }}>Ver detalles</button>
                 </div>
               </figure>
             </div>
