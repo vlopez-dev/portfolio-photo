@@ -2,15 +2,12 @@
 import {push, pop, replace} from 'svelte-spa-router'
 import { getContext } from "svelte";
 import { onMount } from "svelte";
-import { writable } from 'svelte/store';
+import Album from "./Album.svelte";
 
 
 let albums=[];
-let albumId;
-let images = [];
 
-let selectedAlbumId = writable(null);
-
+export let selectedAlbumId;
 
   onMount(async () => {
     try{
@@ -39,11 +36,8 @@ let selectedAlbumId = writable(null);
                 <div class="album-info">
                   <h3>{album.name}</h3>
                   <button on:click={() => {
-
-                    selectedAlbumId.set(album.id)
-                    console.log("Selected Album ID:", $selectedAlbumId);
-
-
+                    selectedAlbumId = album.id;
+                    console.log("Selected Album ID en gallery:", selectedAlbumId);
                     push(`/album/${album.id}`);
                   }}>Ver detalles</button>
                 </div>

@@ -9,7 +9,6 @@
   import Video from './routes/Video.svelte';
   import About from './routes/About.svelte';
   import Router from "svelte-spa-router"
-  import Albumbkp from './routes/Albumbkp.svelte';
   import Album from './routes/Album.svelte';
 
 

@@ -6,31 +6,25 @@
     GalleryImage,
   } from "svelte-lightbox";
   import { onMount } from "svelte";
-  import { selectedAlbumId } from ".././routes/store.js";
+  import {location, querystring} from 'svelte-spa-router'
+  let locacion
+  let albumId;
+  let album = [];
+
+  locacion=$location
+  albumId = locacion.split("/").pop();
+  console.log(albumId)
 
 
 
-let albumId;
-let album = [];
-
-const unsubscribe = selectedAlbumId.subscribe(value => {
-    albumId = value;
-    console.log("Album ID en Album.svelte:", albumId);
-    console.log("Selected Album ID:", $selectedAlbumId);
-  });
   onMount(async () => {
-    if (albumId) {
-      try {
         const [albumResponse] = await Promise.all([
           fetch(`http://127.0.0.1:8000/album/${albumId}`).then((response) => response.json()),
         ]);
 
         album = albumResponse;
-        console.log(album.images);  // Asegúrate de que estás viendo las imágenes específicas del álbum en la consola
-      } catch (error) {
-        console.error(error);
-      }
-    }
+
+    
   });
 
 
@@ -39,6 +33,7 @@ const unsubscribe = selectedAlbumId.subscribe(value => {
 
 
 </script>
+
 
   <section class="section">
     <div class="columns is-4 is-multiline">
@@ -57,6 +52,9 @@ const unsubscribe = selectedAlbumId.subscribe(value => {
               </div>
         </svelte:fragment>
         
+
+
+
             <GalleryImage>
               <img src="" alt="Simple lightbox" />
             </GalleryImage>
