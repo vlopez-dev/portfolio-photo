@@ -23,8 +23,7 @@
         ]);
 
         album = albumResponse;
-
-    
+        console.log(album)
   });
 
 
@@ -53,11 +52,17 @@
         </svelte:fragment>
         
 
-
+            {#if album && album.images && album.images.length > 0}
+            {#each album.images as image}
 
             <GalleryImage>
-              <img src="" alt="Simple lightbox" />
+              
+              <img src="{image.picture}" alt="Simple lightbox" />
             </GalleryImage>
+                {/each}
+              {:else}
+              <p>No hay imágenes disponibles.</p>
+              {/if}
       </LightboxGallery>
     </div>
   </section>

@@ -25,10 +25,11 @@ class Album(models.Model):
 class Image(models.Model):
     name = models.CharField(max_length=100)
     picture = models.ImageField(upload_to="media/")
+    # picture = models.FileField(upload_to="media/")
     thumbnail= models.ImageField(upload_to="media/",blank=True)
     description = models.TextField(blank=True)
     album=models.ManyToManyField('Album',related_name='images') 
-
+    
     def __str__(self):
         return self.name
 

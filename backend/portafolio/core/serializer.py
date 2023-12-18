@@ -21,13 +21,26 @@ class AlbumSerializer(serializers.ModelSerializer):
         model = Album
         fields = ('id', 'name', 'coveralbum','images')
 
+    # def get_images(self, obj):
+    #         image_ids = obj.images.values_list('id', flat=True)
+    #         images = Image.objects.filter(id__in=image_ids)
+    #         return[{'id':t.id,'name':t.name,'picture':t.picture.url,'description':t.description,'thumbnail':t.thumbnail.url} for t in images]
+
+
     def get_images(self, obj):
-            image_ids = obj.images.values_list('id', flat=True)
-            images = Image.objects.filter(id__in=image_ids)
-            return[{'id':t.id,'name':t.name,'picture':t.picture.url,'description':t.description,'thumbnail':t.thumbnail.url} for t in images]
-
-
-
+        request = self.context.get('request')
+        image_ids = obj.images.values_list('id', flat=True)
+        images = Image.objects.filter(id__in=image_ids)
+        image_data = []
+        for image in images:
+            image_data.append({
+                'id': image.id,
+                'name': image.name,
+                'picture': request.build_absolute_uri(image.picture.url) if request else image.picture.url,
+                'description': image.description,
+                'thumbnail': request.build_absolute_uri(image.thumbnail.url) if request else image.thumbnail.url,
+            })
+        return image_data
 class VideoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Video
