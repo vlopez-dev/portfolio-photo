@@ -34,7 +34,7 @@
 </script>
 
 
-  <section class="section">
+  <section class="section hero is-fullheight custom-component">
     <div class="columns is-4 is-multiline">
       <LightboxGallery>
         <svelte:fragment slot="thumbnail">
@@ -56,7 +56,6 @@
             {#each album.images as image}
 
             <GalleryImage>
-              
               <img src="{image.picture}" alt="Simple lightbox" />
             </GalleryImage>
                 {/each}
