@@ -98,7 +98,7 @@ import Gallery from "./Gallery.svelte";
     .home-section {
     /* clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 81%); */
     background-color: #fffffe;
-    background-image: url(https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    /* background-image: url(https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); */
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;

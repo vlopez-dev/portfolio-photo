@@ -52,7 +52,11 @@
     flex-direction: column;
     place-items:normal;
     background-color: #fffffe;
+
 	}
+  /* :global(html){
+    scroll-behavior: smooth;
+  } */
 
   .home-section {
     /* clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 81%); */

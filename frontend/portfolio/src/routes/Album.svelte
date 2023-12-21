@@ -38,17 +38,20 @@
     <div class="columns is-4 is-multiline">
       <LightboxGallery>
         <svelte:fragment slot="thumbnail">
-              <div class="column is-2">
+              <!-- <div class="column is-4"> -->
                 {#if album && album.images && album.images.length > 0}
                   {#each album.images as image}
+                  <div class="column is-4">
+
                 <GalleryThumbnail>
                   <img src="{image.thumbnail}" alt="Simple lightbox" />
                 </GalleryThumbnail>
+              </div>
+
                   {/each}
                 {:else}
                 <p>No hay imágenes disponibles.</p>
                 {/if}
-              </div>
         </svelte:fragment>
         
 
