@@ -35,17 +35,18 @@
 
 
   <section class="section hero is-fullheight custom-component">
-    <div class="columns is-4 is-multiline">
+    <div class="columns is-2 is-multiline is-variable ">
       <LightboxGallery>
         <svelte:fragment slot="thumbnail">
               <!-- <div class="column is-4"> -->
                 {#if album && album.images && album.images.length > 0}
                   {#each album.images as image}
-                  <div class="column is-4">
-
+                  <div class="column is-2" >
+                    <figure class="image is-flex  is-justify-content-center">
                 <GalleryThumbnail>
                   <img src="{image.thumbnail}" alt="Simple lightbox" />
                 </GalleryThumbnail>
+              </figure>
               </div>
 
                   {/each}
