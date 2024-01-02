@@ -26,3 +26,4 @@ dist-ssr
 *.jpg
 /entorno
 ../../entorno/
+/backend/portafolio/media
