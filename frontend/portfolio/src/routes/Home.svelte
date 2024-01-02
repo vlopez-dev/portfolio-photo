@@ -2,10 +2,10 @@
   
   import { onMount } from "svelte";
 
-      import { scrollTo, scrollRef, scrollTop } from 'svelte-scrolling'
+  import { scrollTo, scrollRef, scrollTop } from 'svelte-scrolling'
   import About from "./About.svelte";
   import Contact from "./Contact.svelte";
-import Gallery from "./Gallery.svelte";
+  import Gallery from "./Gallery.svelte";
   import Video from "./Video.svelte";
   import { each } from "svelte/internal";
 
@@ -26,7 +26,7 @@ import Gallery from "./Gallery.svelte";
     }
   });
 
- let showHome = true;
+    let showHome = true;
     let showNav = true;
     let showGallery = true;
     let showFooter = true;
@@ -43,21 +43,23 @@ import Gallery from "./Gallery.svelte";
 
 
 </script>
-<section  use:scrollRef={'home'} id="Home" class=" home-section hero is-large  custom-component" >
-  
-<div class="hero-body ">
-    <div class="">
-      {#each home as data}
-      <p class="title">
-        {data.title}
-      </p>
-      <p class="subtitle">
-        {data.subtitle}
-      </p>
-      {/each}
+<section  use:scrollRef={'home'} id="Home" class=" home-section hero is-large  custom-component"  >
+  <div class="hero is-fullheight  ">
+    <img alt="Fill Murray" class="hero-background is-transparent" src="https://images.unsplash.com/photo-1559999831-7deaf136d4a9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          Hero Image
+        </h1>
+        <h3 class="subtitle">
+          without CSS background-image
+        </h3>
+      </div>
     </div>
   </div>
 </section>
+
+
 <section use:scrollRef={'photo'} id="Photo" class="photo-gallery hero is-fullheight custom-component">
 <Gallery></Gallery>
 </section>
@@ -75,6 +77,36 @@ import Gallery from "./Gallery.svelte";
 
 
 <style>
+.hero.has-background {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-background {
+  position: absolute;
+  object-fit: cover;
+  object-position: center center;
+  background-attachment: fixed;
+
+  width: 100%;
+  height: 100%;
+}
+.hero-background.is-transparent {
+  opacity: 0.3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .title{
     color: #272343;
@@ -95,15 +127,15 @@ import Gallery from "./Gallery.svelte";
     }
 
 
-    .home-section {
+    .home-section  {
     /* clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 81%); */
-    background-color: #fffffe;
+    /* background-color: #fffffe; */
     /* background-image: url(https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); */
-    background-size: cover;
+    /* background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
-    height: 80%;
+    height: 80%; */
     
       }
 

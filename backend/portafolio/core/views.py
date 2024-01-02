@@ -1,12 +1,13 @@
 from django.shortcuts import render
 from rest_framework import viewsets
 from .serializer import (
+    AboutSerializer,
     AlbumSerializer,
     HomeSerializer,
     ImageSerializer,
     VideoSerializer,
 )
-from .models import Album, Home, Image
+from .models import About, Album, Home, Image
 from django.shortcuts import get_object_or_404
 from urllib import response
 
@@ -38,3 +39,16 @@ class AlbumViewSet(viewsets.ModelViewSet):
             {"serializer": serializer, "album": album}, template_name="index.html"
         )
 
+
+
+class AboutViewSet(viewsets.ModelViewSet):
+    queryset = About.objects.all()
+    serializer_class = AboutSerializer
+    template_name = "core/index.html"
+
+    def get(self, request, id):
+        about = get_object_or_404(About, pk=id)
+        serializer = AboutSerializer(about)
+        return response(
+            {"serializer": serializer, "about": about}, template_name="index.html"
+        )
