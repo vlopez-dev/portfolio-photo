@@ -43,9 +43,10 @@
 
 
 </script>
-<section  use:scrollRef={'home'} id="Home" class=" home-section hero is-large  custom-component"  >
-  <div class="hero is-fullheight  ">
-    <img alt="Fill Murray" class="hero-background is-transparent" src="https://images.unsplash.com/photo-1559999831-7deaf136d4a9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+<section  use:scrollRef={'home'} id="Home"  >
+  {#each home as home}
+  <div class="hero is-medium is-primary has-background">
+    <img alt="Fill Murray" class="hero-background is-transparent" src="{home.cover}" />
     <div class="hero-body">
       <div class="container">
         <h1 class="title">
@@ -57,7 +58,8 @@
       </div>
     </div>
   </div>
-</section>
+  {/each}
+  </section>
 
 
 <section use:scrollRef={'photo'} id="Photo" class="photo-gallery hero is-fullheight custom-component">
@@ -77,30 +79,27 @@
 
 
 <style>
+
+
+
+
+
+
+
 .hero.has-background {
   position: relative;
   overflow: hidden;
 }
-
 .hero-background {
   position: absolute;
   object-fit: cover;
   object-position: center center;
-  background-attachment: fixed;
-
   width: 100%;
   height: 100%;
 }
-.hero-background.is-transparent {
+/* .hero-background.is-transparent {
   opacity: 0.3;
-}
-
-
-
-
-
-
-
+} */
 
 
 
