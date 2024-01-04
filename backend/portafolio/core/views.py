@@ -7,7 +7,7 @@ from .serializer import (
     ImageSerializer,
     VideoSerializer,
 )
-from .models import About, Album, Home, Image
+from .models import About, Album, Home, Image,Video
 from django.shortcuts import get_object_or_404
 from urllib import response
 
@@ -51,4 +51,18 @@ class AboutViewSet(viewsets.ModelViewSet):
         serializer = AboutSerializer(about)
         return response(
             {"serializer": serializer, "about": about}, template_name="index.html"
+        )
+
+
+
+class VideoViewSet(viewsets.ModelViewSet):
+    queryset = Video.objects.all()
+    serializer_class = VideoSerializer
+    template_name = "core/index.html"
+
+    def get(self, request, id):
+        video = get_object_or_404(Video, pk=id)
+        serializer = VideoSerializer(video)
+        return response(
+            {"serializer": serializer, "video": video}, template_name="index.html"
         )

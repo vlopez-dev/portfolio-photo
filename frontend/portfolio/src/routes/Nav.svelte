@@ -81,7 +81,7 @@ function handleScroll(event) {
     </div>
   </nav>
 </header>
-<slot />
+<!-- <slot /> -->
 
 
 <style>

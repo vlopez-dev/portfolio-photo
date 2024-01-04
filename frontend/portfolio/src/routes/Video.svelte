@@ -1,22 +1,35 @@
 <script>
-  import videos from '../videos'
 
     import { onMount } from "svelte";
     function handleClick(e) {
 		console.log(e.detail.src)
 	}
+let videos=[];
+
+  onMount(async () => {
+    try{
+      const[videoResponse] = await Promise.all([
+        fetch("http://127.0.0.1:8000/video/").then((response) => response.json()),
+      ]);
+      videos = videoResponse;
+      console.log(videos)
+    }catch(error){
+      console.log(error);
+    }
+  });
+
+
 </script>
 <section class="section ">
     <div class="container">
       <h2 class="title title-section ">Video</h2>
       <div class="columns is-multiline">
-         
-        {#each videos as video,i}
+         {#each videos as video}
 
           <div class="column is-4">
             <div class="gallery-item " data-index="">
                 <video controls autoplay >
-                  <source src="{video.cover}">
+                  <source src="{video.video}">
                 </video>
                
             </div>

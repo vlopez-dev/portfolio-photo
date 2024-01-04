@@ -7,6 +7,7 @@
   } from "svelte-lightbox";
   import { onMount } from "svelte";
   import {location, querystring} from 'svelte-spa-router'
+  import Nav from "./Nav.svelte";
   let locacion
   let albumId;
   let album = [];

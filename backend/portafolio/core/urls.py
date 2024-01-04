@@ -10,6 +10,8 @@ router = routers.DefaultRouter()
 router.register(r'home', views.HomeViewSet)
 router.register(r'album', views.AlbumViewSet)
 router.register(r'about', views.AboutViewSet)
+router.register(r'video', views.VideoViewSet)
+
 
 
 

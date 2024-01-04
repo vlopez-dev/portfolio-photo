@@ -1,8 +1,6 @@
 <script>
 import {push, pop, replace} from 'svelte-spa-router'
-import { getContext } from "svelte";
 import { onMount } from "svelte";
-import Album from "./Album.svelte";
 
 
 let albums=[];
@@ -46,9 +44,6 @@ export let selectedAlbumId;
           </div>
           {/each}
 
-         
-          
-          
       </div>
     </div>
   </section>

@@ -7,7 +7,6 @@
   import Contact from "./Contact.svelte";
   import Gallery from "./Gallery.svelte";
   import Video from "./Video.svelte";
-  import { each } from "svelte/internal";
 
 
   let home=[];
@@ -50,10 +49,10 @@
     <div class="hero-body">
       <div class="container">
         <h1 class="title">
-          Hero Image
+          {home.title}
         </h1>
         <h3 class="subtitle">
-          without CSS background-image
+          {home.subtitle}
         </h3>
       </div>
     </div>
@@ -68,7 +67,7 @@
 <section use:scrollRef={'video'} id="Video" class=" section-video hero is-fullheight custom-component">
 <Video></Video>
 </section>
-<section use:scrollRef={'about'} id="About" class=" about-section hero is-fullheight custom-component mt-6">
+<section use:scrollRef={'about'} id="About" class=" about-section hero is-fullheight custom-component">
 <About></About>
 </section>
 <section use:scrollRef={'contact'} id="Contact" class=" contact-section hero is-fullheight custom-component">

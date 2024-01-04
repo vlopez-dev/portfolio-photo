@@ -7,7 +7,7 @@ from django_resized import ResizedImageField
 class Home(models.Model):
     title = models.CharField(max_length=100, blank=True)
     subtitle = models.CharField(max_length=100, blank=True)
-    cover=ResizedImageField(size=[800, 600], quality=100, upload_to="media/", force_format='WEBP', blank=True)
+    cover=ResizedImageField(size=[1920, 1080], quality=100, upload_to="media/", force_format='WEBP', blank=True)
 
 
 def __str__(self):
