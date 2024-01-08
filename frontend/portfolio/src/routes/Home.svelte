@@ -1,7 +1,6 @@
 <script>
   
   import { onMount } from "svelte";
-
   import { scrollTo, scrollRef, scrollTop } from 'svelte-scrolling'
   import About from "./About.svelte";
   import Contact from "./Contact.svelte";
@@ -25,6 +24,8 @@
     }
   });
 
+
+
     let showHome = true;
     let showNav = true;
     let showGallery = true;
@@ -42,10 +43,12 @@
 
 
 </script>
-<section  use:scrollRef={'home'} id="Home"  >
+
+
+<section  use:scrollRef={'home'} id="Home" >
   {#each home as home}
-  <div class="hero is-medium is-primary has-background">
-    <img alt="Fill Murray" class="hero-background is-transparent" src="{home.cover}" />
+  <div class="hero is-medium is-primary has-background ">
+    <img alt="Fill Murray" class="hero-background is-transparent parallax-image" src="{home.cover}" />
     <div class="hero-body">
       <div class="container">
         <h1 class="title">
@@ -84,7 +87,6 @@
 
 
 
-
 .hero.has-background {
   position: relative;
   overflow: hidden;
@@ -96,15 +98,6 @@
   width: 100%;
   height: 100%;
 }
-/* .hero-background.is-transparent {
-  opacity: 0.3;
-} */
-
-
-
-
-
-
 
 .title{
     color: #272343;
@@ -126,14 +119,13 @@
 
 
     .home-section  {
-    /* clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 81%); */
-    /* background-color: #fffffe; */
-    /* background-image: url(https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); */
-    /* background-size: cover;
+   
+    background-color: #fffffe; 
+    background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
-    height: 80%; */
+    height: 80%;
     
       }
 
