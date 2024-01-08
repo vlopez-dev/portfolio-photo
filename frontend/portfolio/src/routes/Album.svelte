@@ -5,8 +5,9 @@
     GalleryThumbnail,
     GalleryImage,
   } from "svelte-lightbox";
+  import { ArrowLeftIcon} from 'svelte-feather-icons'
   import { onMount } from "svelte";
-  import {location, querystring} from 'svelte-spa-router'
+  import {location,pop} from 'svelte-spa-router'
   import Nav from "./Nav.svelte";
   let locacion
   let albumId;
@@ -36,7 +37,9 @@
 
 
   <section class="section hero is-fullheight custom-component">
-    <div class="columns is-2 is-multiline is-variable ">
+    <div class="container">
+    <div class="columns is-2 is-multiline is-variable mt-6 ">
+      
       <LightboxGallery>
         <svelte:fragment slot="thumbnail">
               <!-- <div class="column is-4"> -->

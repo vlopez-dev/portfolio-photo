@@ -27,9 +27,7 @@
 
 </script>
 
-    
-
-
+<!-- 
 
   <Nav
   item0="Home"
@@ -38,7 +36,7 @@
   item3="Contact"
   item4="About"
   ></Nav>
-
+ -->
 
 <Router {routes}></Router>
 

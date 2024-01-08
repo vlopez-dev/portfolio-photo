@@ -6,7 +6,7 @@
   import Contact from "./Contact.svelte";
   import Gallery from "./Gallery.svelte";
   import Video from "./Video.svelte";
-
+import Nav from "./Nav.svelte";
 
   let home=[];
 
@@ -43,6 +43,16 @@
 
 
 </script>
+
+
+
+  <Nav
+  item0="Home"
+  item1="Photos"
+  item2="Video"
+  item3="Contact"
+  item4="About"
+  ></Nav>
 
 
 <section  use:scrollRef={'home'} id="Home" >
