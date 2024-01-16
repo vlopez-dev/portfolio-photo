@@ -27,3 +27,4 @@ dist-ssr
 /entorno
 ../../entorno/
 /backend/portafolio/media
+/backend/portafolio/logs
