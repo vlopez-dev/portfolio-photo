@@ -1,8 +1,6 @@
 from django.db import models
 from django_resized import ResizedImageField
 
-# Create your models here.
-
 
 class Home(models.Model):
     title = models.CharField(max_length=100, blank=True)
@@ -10,8 +8,8 @@ class Home(models.Model):
     cover=ResizedImageField(size=[1920, 1080], quality=100, upload_to="media/", force_format='WEBP', blank=True)
 
 
-def __str__(self):
-    return self.title
+    def __str__(self):
+        return self.title
 
 
 class Album(models.Model):

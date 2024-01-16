@@ -37,7 +37,12 @@
 
 
   <section class="section hero is-fullheight custom-component">
-    <div class="container">
+   
+  <div class="cont-row" >
+    <span class="icon is-large custom-icons"  on:click={pop}>
+      <ArrowLeftIcon size="24" />
+    </span>
+  </div>
     <div class="columns is-2 is-multiline is-variable mt-6 ">
       
       <LightboxGallery>
@@ -73,3 +78,16 @@
       </LightboxGallery>
     </div>
   </section>
+
+
+
+  <style>
+
+    .cont-row{
+      position: absolute;
+      height: 50px;
+      width: 50px;
+      color: black;
+    }
+  
+  </style>
