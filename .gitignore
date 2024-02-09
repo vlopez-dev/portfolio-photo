@@ -24,6 +24,7 @@ dist-ssr
 *.sw?
 *.mp4
 *.jpg
+*.pyc
 /entorno
 ../../entorno/
 /backend/portafolio/media
